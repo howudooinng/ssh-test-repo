@@ -1,0 +1,76 @@
+#This section to be used to set up SSH connection from local to remote for GIT and GITHUB
+
+#Install Git for MacOS
+brew install git
+
+#Verify git version after installation
+git --version
+
+#Configure GIT
+git config --global user.name "user.name"
+git config --global user.email "user.email"
+
+#Verify git configuration
+git config --global --list
+
+#Generate SSH key 
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+#accept configuration and press enter twice to setup the keygen
+/Users/yourusername/.ssh/id_ed25519
+
+#Display pub.key
+cat ~/.ssh/id_ed25519.pub
+
+#Start SSH agent 
+eval "$(ssh-agent -s)"
+
+#Add public key 
+ssh-add ~/.ssh/id_ed25519
+
+#how to find the key 
+cat ~/.ssh/id_ed25519.pub
+
+#copy the entire output of the above linux command
+
+#open github and open ssh settings 
+#create new ssh key 
+#give it a recognisable name for your reference 
+#Paste the key
+#save 
+
+#Test the connection
+ssh -T git@github.com
+
+#Success message - Hi howudooinng! You've successfully authenticated, but GitHub does not provide shell access.
+
+
+#This section to be used for the Steps to add your first folder and changes to the remote github repo 
+#create a local folder 
+mkdir test
+cd test
+
+#create a file
+echo "Hello github" > README.md
+
+#The above statement create a README.md file and it has "Hello Github"
+
+git init --> intialises the repo
+git add . --> adds the untracked file to track by the git 
+git commit -m "Initial commit" --> command to commit the tracked changes to the github remote location
+git branch -M main      # rename branch to main, renames the local branch to main, needs to be done initially, as a standard set by github
+git remote add origin git@github.com:howudooinng/repo-name.git --> this command helps point to the main branch of the repo, add your repo name which was created on the github.
+git push -u origin main --> this helps pushes the changes to remote repo for the first time, after this this setup is not required to be done 
+
+#Daily git activity for pushing changes to remote 
+git add .
+git commit -m "Updated code"
+git push
+
+
+
+
+
+
+
+
