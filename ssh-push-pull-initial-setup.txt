@@ -68,8 +68,24 @@ git commit -m "Updated code"
 git push
 
 
+#This section to be used for the steps to clone your first folder and verify the same
 
+cd ~/Desktop --> change the directory where you want to keep the cloned repo's data 
 
+#command to clone the repo
+
+git clone git@github.com:howudooinng/my-git-demo-repo.git
+git clone git@github.com:user.name/clone-repo-name.git
+
+#enter the repo
+cd my-first-repo
+
+#Verify the connection
+git remote -v
+
+output-
+origin  git@github.com:howudooinng/my-first-repo.git (fetch)
+origin  git@github.com:howudooinng/my-first-repo.git (push)
 
 
 
