@@ -1,0 +1,32 @@
+
+
+Prerequisites For Learning DevOps
+
+What are the Different  Roles in an Organization?
+
+Amazon — Fresh
+                — Prime
+                — E-Commerce
+
+— Roles in Amazon Fresh —> The most important for any business is customers.
+To gather feedback good/bad from customers. Mostly customers are the people who generates the requirements based on the Feedback.
+
+Business Analyst’s — Interacting with Customers to get the Requirements and choose a requirements which they like and they prepare a  BRD (Business Requirement Document)
+ Product Managers — These Requirements are taken down by the Product Managers, and these items are prioritize by the Pm’s. PM’s gets all the requirements from BA’s and prioritizes the requirements based on many factors within the organization.  Product Owner’s — Now Pm’s Interacts with PO’s, who deep dives more into technical details of that requirements. Po’s then breaks it down into actionable Items - Creating EPICS.  Software Architects — PO’s interacts with Software Architects, Architects actually deep dive into the technical details for the requirements creating LLD and HLD. Architects give the real scenarios which are available or not and accordingly Items gets prioritize.   Development Team — The lead gets the design of the requirement. We might need some infra, k8’s cluster, may be docker, some repos only then we can complete this requirements.
+
+QA engineers — works on Testing the Requirements, DBA’s take care of the Databases created by the DevOps engineers.  Everything is done and the product is created  BA, PM, PO, SA —> Passive Part of the Team.  DEV’s, DevOps engineer, QA engineers, DBA’s —> SCRUM Team.   Site Reliability Engineers —After product is lIve then SRE comes into picture — basically monitoring the new products and informing the team at the time required. 
+
+Technical Writers — Writing the changes which have been done and how the specification of the change or product is done by the company
+
+
+How DevOps engineers get their Requirements?  How a Project is Managed in an Organization, using project management tools like JIRA? — create account with JIRA, how requirements are put in JIRA by other roles, how you can see your day to day task, update it, completion status, updated status.  So in a Nutshell SDLC has Below Phases —
+Planning —> Analysis —>  Design —> Implementation —> Testing & Integration  —> Maintenance  Apart from these SDLC phase, a DevOps engineers tries to identify how the things which come under the scope can be done fast and tries to automate the tasks which requires manual efforts.
+ DevOps engineers also does the full security of the Pipelines and related phases which comes under the DevOps lifecycle. End to End security goes in every part of the DevOps lifecycle.   Project Management — There should be a Platform to track the changes or status of a change or project by the management. Suppose anything is blocked or any issue comes up, so that goes into the project management tool and that issue has to be notified over the entire layer of the management which has the responsibility to manage the project.
+
+
+
+SCRUM is a methodology within Agile, a framework which has sprints which are two weeks or three weeks work, tracked as a sprint.  At the end, a sprint retrospective meeting is done, which tracks the %age of completion of the items which was there in the sprint.
+It can be for any team within the sprint.  A sprint starts with sprint planning meeting where a meeting is done to see the backlog and decide which tasks to be done in the coming sprint.
+
+Epic will be there — broken down to stories — a story gets created — epics get created — stories gets added — backlog gets populated — so this cycle goes on  Backlog refinement - new story keeps coming and how the Backlog refinement is done — explore this scrum and Kanban
+
