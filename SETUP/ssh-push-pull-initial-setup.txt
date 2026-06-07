@@ -1,0 +1,104 @@
+
+*****************************************************************************************************************************************************************************************
+
+#This section to be used to set up SSH connection from local to remote for GIT and GITHUB
+
+#Install Git for MacOS
+brew install git
+
+#Verify git version after installation
+git --version
+
+#Configure GIT
+git config --global user.name "user.name"
+git config --global user.email "user.email"
+
+#Verify git configuration
+git config --global --list
+
+#Generate SSH key 
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+#accept configuration and press enter twice to setup the keygen
+/Users/yourusername/.ssh/id_ed25519
+
+#Display pub.key
+cat ~/.ssh/id_ed25519.pub
+
+#Start SSH agent 
+eval "$(ssh-agent -s)"
+
+#Add public key 
+ssh-add ~/.ssh/id_ed25519
+
+#how to find the key 
+cat ~/.ssh/id_ed25519.pub
+
+#copy the entire output of the above linux command
+
+#open github and open ssh settings 
+#create new ssh key 
+#give it a recognisable name for your reference 
+#Paste the key
+#save 
+
+#Test the connection
+ssh -T git@github.com
+
+#Success message - Hi howudooinng! You've successfully authenticated, but GitHub does not provide shell access.
+
+
+#This section to be used for the Steps to add your first folder and changes to the remote github repo 
+#create a local folder 
+mkdir test
+cd test
+
+#create a file
+echo "Hello github" > README.md
+
+#The above statement create a README.md file and it has "Hello Github"
+
+git init --> intialises the repo
+git add . --> adds the untracked file to track by the git 
+git commit -m "Initial commit" --> command to commit the tracked changes to the github remote location
+git branch -M main      # rename branch to main, renames the local branch to main, needs to be done initially, as a standard set by github
+git remote add origin git@github.com:howudooinng/repo-name.git --> this command helps point to the main branch of the repo, add your repo name which was created on the github.
+git push -u origin main --> this helps pushes the changes to remote repo for the first time, after this this setup is not required to be done 
+
+#Daily git activity for pushing changes to remote 
+git add .
+git commit -m "Updated code"
+git push
+
+
+#This section to be used for the steps to clone your first folder and verify the same
+
+cd ~/Desktop --> change the directory where you want to keep the cloned repo's data 
+
+#command to clone the repo
+
+git clone git@github.com:howudooinng/my-git-demo-repo.git
+git clone git@github.com:user.name/clone-repo-name.git
+
+#enter the repo
+cd my-first-repo
+
+#Verify the connection
+git remote -v --> to check the upto date status 
+
+output-
+origin  git@github.com:howudooinng/my-first-repo.git (fetch)
+origin  git@github.com:howudooinng/my-first-repo.git (push)
+
+git branch --> to check the current branch
+
+
+#now if somechanges are made to the remote repo, the current setup will allow you to pull those changes via the ssh - connecton, and allows you to use the git pull command 
+
+git pull origin main --> pulls all the changes made to the remote repo to the local and makes the updates locally
+
+
+******************************************************************************************************************************************************************************************
+
+
+
