@@ -1,6 +1,6 @@
-##########################################################
+####################################################################################################################################
 
-How to connect the local linux or EC2 linux to AWS accoount ?
+How to connect the local linux or EC2 linux to AWS account ?
 
 First install AWS CLI 
 
@@ -10,9 +10,9 @@ sudo installer -pkg AWSCLIV2.pkg -target /
 
 after installing package, setup, AWS configure
 
-Login to your AWS account,
+Login to your AWS account on a web browser,
 Then go to IAM. create user of you choice, and then Create #access_key,
 after creating the #access_key, note down the #password and then use it to configure your aws account to your local terminal.
 
 
-############################################################
+####################################################################################################################################
