@@ -51,10 +51,12 @@ We usually build the application from the Release branches and not from the Main
 So to deliver the new functionality, we use release branches for the testing and the shipping of the code to the customer.
 
 So Why we use a Release branch ?
+
 We use the Release Branch because, we want to ship the final production ready code to the customers on time.
 So the release branch only has the prod ready changes and nothing else is present in that branch.
 
 Why not directly ship using Main branch ?
+
 Because the main branch will be having active developments going on simultaneouly by other developers, so shippinh use main will also ship the under progress code to the customers which is wrong and shouldn't happen in an organization which sets up pretty bad delivery standards and also if a project is shipping code through the main branch, then only one person can develop that application only or if many people are there, then they will have to wait for the dev who is doing his changes to completely ship it to customer and then a new change will start for that application.
 SO this creates delay in the product enhancements and other project releated tasks.
 
